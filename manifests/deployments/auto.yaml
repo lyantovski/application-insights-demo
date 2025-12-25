@@ -1,0 +1,12 @@
+apiVersion: monitor.azure.com/v1
+kind: Instrumentation
+metadata:
+  name: default
+  namespace: spring-petclinic
+spec:
+  settings:
+    autoInstrumentationPlatforms: # required
+      - Java
+      - NodeJs
+  destination: # required
+    applicationInsightsConnectionString: "InstrumentationKey=210a5162-d8de-44d7-b13e-d19840733236;IngestionEndpoint=https://swedencentral-0.in.applicationinsights.azure.com/;LiveEndpoint=https://swedencentral.livediagnostics.monitor.azure.com/;ApplicationId=68d8a4cf-55aa-472b-8c14-920023891914"
